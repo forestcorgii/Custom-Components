@@ -18,7 +18,7 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>d:\4 - Bins\custom-components\</OutputPath>
     <DocumentationFile>custom-components.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
@@ -46,6 +46,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,11 +67,35 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.vb" />
+    <Compile Include="ArcProgressbar.Designer.vb">
+      <DependentUpon>ArcProgressbar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ArcProgressbar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomButton.Designer.vb">
+      <DependentUpon>CustomButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomProgressbar.Designer.vb">
+      <DependentUpon>CustomProgressbar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomProgressbar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomTextbox.Designer.vb">
+      <DependentUpon>CustomTextbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomTextbox.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -82,6 +109,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ArcProgressbar.resx">
+      <DependentUpon>ArcProgressbar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomButton.resx">
+      <DependentUpon>CustomButton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomProgressbar.resx">
+      <DependentUpon>CustomProgressbar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomTextbox.resx">
+      <DependentUpon>CustomTextbox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
